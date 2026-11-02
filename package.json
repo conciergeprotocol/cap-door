@@ -1,0 +1,20 @@
+{
+  "name": "cap-door",
+  "private": true,
+  "description": "A Concierge Agent Protocol door that answers AI agents from a website's pages.",
+  "type": "module",
+  "scripts": {
+    "start": "node serve.js",
+    "check": "cap-check http://127.0.0.1:8088"
+  },
+  "engines": {
+    "node": ">=22.13"
+  },
+  "dependencies": {
+    "@conciergeprotocol/agent": "^0.2.0",
+    "@conciergeprotocol/server": "^0.3.0",
+    "ai": "^7.0.154",
+    "create-cap-door": "^0.1.0"
+  },
+  "license": "Apache-2.0"
+}

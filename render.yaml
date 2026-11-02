@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: cap-door
+    runtime: docker
+    plan: starter
+    healthCheckPath: /health
+    disk:
+      name: cap-data
+      mountPath: /app/data
+      sizeGB: 1
+    envVars:
+      - key: SITE_URL
+        sync: false
+      - key: AI_GATEWAY_API_KEY
+        sync: false
