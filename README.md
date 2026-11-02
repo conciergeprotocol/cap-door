@@ -12,7 +12,7 @@ On Vercel, the door signs in to AI Gateway on its own, so `SITE_URL` is the only
 
 [![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https%3A%2F%2Fgithub.com%2Fconciergeprotocol%2Fcap-door)
 
-Render asks for `SITE_URL` and `AI_GATEWAY_API_KEY`, and keeps messages on a 1 GB disk. A disk needs a paid instance.
+Render asks for `SITE_URL` and `AI_GATEWAY_API_KEY` and runs on the free plan. A free instance sleeps when idle, so the first question after a quiet spell is slow, and messages reset when it restarts. Add a disk at `/app/data` on a paid instance, or set `DATABASE_URL`, to keep them.
 
 **Fly.io**
 
@@ -25,7 +25,7 @@ fly deploy
 
 **Railway**
 
-Create a project from this repository, add a volume mounted at `/app/data`, and set `SITE_URL` and `AI_GATEWAY_API_KEY`.
+Create a service from this repository, add a volume mounted at `/app/data`, and set `SITE_URL` and `AI_GATEWAY_API_KEY`.
 
 **Anywhere else**
 
